@@ -225,7 +225,7 @@ body.is-unlocked #site {
 .hero__content {
   position: relative;
   z-index: 1;
-  max-width: 620px;
+  max-width: 700px;
   margin: 0 auto;
   text-align: center;
   padding: 0 1.5rem;
@@ -240,11 +240,11 @@ body.is-unlocked #site {
 }
 .hero__lead {
   font-family: var(--font-display);
-  font-size: 1.55rem;
-  font-weight: 600;
+  font-size: clamp(1.15rem, 2.6vw, 1.35rem);
+  font-weight: 500;
   font-style: italic;
-  line-height: 1.35;
-  margin: 0 0 0.45rem;
+  line-height: 1.45;
+  margin: 0 0 0.6rem;
   opacity: 0.98;
 }
 .hero__subheadline {
@@ -765,6 +765,8 @@ body.modal-open {
 
 @media (max-width: 640px) {
   .hero__headline { font-size: 2.2rem; }
+  .hero__lead { font-size: 1.05rem; }
+  .hero__subheadline { font-size: 0.95rem; }
   .section__title { font-size: 1.85rem; }
   .product-row { grid-template-columns: 1fr 1fr; gap: 0.8rem; }
   .product-card__name { font-size: 1.05rem; }
