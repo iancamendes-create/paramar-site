@@ -51,77 +51,6 @@
       img: 'gin-vies-garrafa.jpg',
       imgHover: 'gin-vies-hover.jpg'
     },
-    {
-      id: 'gin-beefeater',
-      name: 'Gin Beefeater',
-      category: 'Gins',
-      volume: '700ml',
-      price: 89.90,
-      description: 'London Dry clássico, botânicos equilibrados e um caráter de zimbro que atravessa gerações.',
-      img: 'gin-beefeater-garrafa.jpg',
-      imgHover: 'gin-beefeater-hover.jpg'
-    },
-    {
-      id: 'gin-beefeater-limao-siciliano',
-      name: 'Gin Beefeater Limão Siciliano',
-      category: 'Gins',
-      volume: '700ml',
-      price: 94.00,
-      description: 'A tradição Beefeater com um sopro cítrico de limão siciliano, refrescante do início ao fim.',
-      img: 'gin-beefeater-limao-siciliano-garrafa.jpg',
-      imgHover: 'gin-beefeater-limao-siciliano-hover.jpg'
-    },
-    {
-      id: 'gin-tanqueray',
-      name: 'Gin Tanqueray',
-      category: 'Gins',
-      volume: '750ml',
-      price: 104.90,
-      description: 'Destilado quatro vezes com os melhores botânicos do mundo, o gin que virou ícone em Londres.',
-      img: 'gin-tanqueray-garrafa.jpg',
-      imgHover: 'gin-tanqueray-hover.jpg'
-    },
-    {
-      id: 'gin-tanqueray-sevilla',
-      name: 'Gin Tanqueray Sevilla',
-      category: 'Gins',
-      volume: '750ml',
-      price: 110.00,
-      description: 'Laranjas amargas de Sevilha encontram o London Dry clássico, cítrico, complexo, inconfundível.',
-      img: 'gin-tanqueray-sevilla-garrafa.jpg',
-      imgHover: 'gin-tanqueray-sevilla-hover.jpg'
-    },
-    {
-      id: 'gin-gordons',
-      name: "Gin Gordon's",
-      category: 'Gins',
-      volume: '750ml',
-      price: 84.50,
-      description: 'O London Dry mais premiado do mundo, zimbro em primeiro plano, frescor que nunca sai de moda.',
-      img: 'gin-gordons-garrafa.jpg',
-      imgHover: 'gin-gordons-hover.jpg'
-    },
-    {
-      id: 'gin-intencion',
-      name: 'Gin Intención',
-      category: 'Gins',
-      volume: '900ml',
-      price: 40.00,
-      description: 'Entrada suave e botânicos discretos, para descobrir o universo gin sem exagero.',
-      img: 'gin-intencion-garrafa.jpg',
-      imgHover: 'gin-intencion-hover.jpg'
-    },
-    {
-      id: 'gin-intencion-strawberry',
-      name: 'Gin Intención Strawberry',
-      category: 'Gins',
-      volume: '900ml',
-      price: 40.00,
-      description: 'A leveza do Intención com doçura de morango, fácil de beber, fácil de gostar.',
-      img: 'gin-intencion-strawberry-garrafa.jpg',
-      imgHover: 'gin-intencion-strawberry-hover.jpg'
-    },
-
     // ===== VODKAS =====
     {
       id: 'saints-bay-original',
@@ -153,27 +82,6 @@
       img: 'saints-bay-laranja-pessego-garrafa.jpg',
       imgHover: 'saints-bay-laranja-pessego-hover.jpg'
     },
-    {
-      id: 'vodka-absolut',
-      name: 'Vodka Absolut',
-      category: 'Vodkas',
-      volume: '750ml',
-      price: 119.00,
-      description: 'Vodka sueca de pureza absoluta, destilada a partir de trigo de inverno, base perfeita para qualquer coquetel.',
-      img: 'vodka-absolut-garrafa.jpg',
-      imgHover: 'vodka-absolut-hover.jpg'
-    },
-    {
-      id: 'vodka-skyy',
-      name: 'Vodka Skyy',
-      category: 'Vodkas',
-      volume: '980ml',
-      price: 70.00,
-      description: 'Vodka americana quadruplamente destilada, suave, limpa, sem arestas.',
-      img: 'vodka-skyy-garrafa.jpg',
-      imgHover: 'vodka-skyy-hover.jpg'
-    },
-
     // ===== CACHAÇAS =====
     {
       id: 'maria-guarda-classica',
@@ -194,16 +102,6 @@
       description: 'Dourada e encorpada, envelhecida em amburana, pede copo baixo, gelo grande e conversa longa.',
       img: 'maria-guarda-amburana-garrafa.jpg'
     },
-    {
-      id: 'cachaca-ypioca',
-      name: 'Cachaça Ypioca com Palha Ouro',
-      category: 'Cachaças',
-      volume: '965ml',
-      price: 59.90,
-      description: 'Envelhecida, com toque adocicado, tradição baiana engarrafada, perfeita numa caipirinha ou pura.',
-      img: 'cachaca-ypioca-garrafa.jpg'
-    },
-
     // ===== LICORES =====
     {
       id: 'licor-itacare-fire',
@@ -236,28 +134,6 @@
       imgHover: 'licor-itacare-limoncello-hover.jpg'
     },
 
-    // ===== WHISKIES =====
-    {
-      id: 'whisky-chanceler',
-      name: 'Whisky Chanceler',
-      category: 'Whiskies',
-      volume: '1L',
-      price: 60.00,
-      description: 'Whisky nacional suave, para o ritual simples do fim de tarde, puro, com gelo ou num highball.',
-      img: 'whisky-chanceler-garrafa.jpg',
-      imgHover: 'whisky-chanceler-hover.jpg'
-    },
-    {
-      id: 'whisky-white-horse',
-      name: 'Whisky White Horse',
-      category: 'Whiskies',
-      volume: '1L',
-      price: 80.00,
-      description: 'Blend escocês equilibrado, amadeirado e macio, clássico para quem gosta de whisky sem complicação.',
-      img: 'whisky-white-horse-garrafa.jpg',
-      imgHover: 'whisky-white-horse-hover.jpg'
-    },
-
     // ===== COQUETÉIS PRONTOS =====
     {
       id: 'paramana-negroni',
@@ -281,7 +157,7 @@
     }
   ];
 
-  const CATEGORY_ORDER = ['Gins', 'Vodkas', 'Cachaças', 'Licores', 'Whiskies', 'Coquetéis prontos'];
+  const CATEGORY_ORDER = ['Gins', 'Vodkas', 'Cachaças', 'Licores', 'Coquetéis prontos'];
   const IMG_BASE = 'assets/images/produtos/';
 
   function formatPrice(value) {
