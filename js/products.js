@@ -373,6 +373,20 @@
         if (product) openModal(product);
       }
     });
+
+    initTouchImageCycle();
+  }
+
+  // Em telas sem hover (celular/tablet), alterna as fotos automaticamente
+  // já que não existe passar o mouse por cima para trocar a imagem.
+  function initTouchImageCycle() {
+    if (!window.matchMedia || !window.matchMedia('(hover: none)').matches) return;
+    const cards = document.querySelectorAll('.product-card.has-hover');
+    cards.forEach(function (card) {
+      setInterval(function () {
+        card.classList.toggle('is-showing-hover');
+      }, 2500);
+    });
   }
 
   // ===== MODAL DE PRODUTO =====

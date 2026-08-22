@@ -423,8 +423,10 @@ body.is-unlocked #site {
   transition: opacity 0.35s ease;
 }
 .product-card__img--hover { opacity: 0; }
-.product-card.has-hover:hover .product-card__img--base { opacity: 0; }
-.product-card.has-hover:hover .product-card__img--hover { opacity: 1; }
+.product-card.has-hover:hover .product-card__img--base,
+.product-card.has-hover.is-showing-hover .product-card__img--base { opacity: 0; }
+.product-card.has-hover:hover .product-card__img--hover,
+.product-card.has-hover.is-showing-hover .product-card__img--hover { opacity: 1; }
 .product-card__body {
   padding: 1.1rem 1.1rem 1.3rem;
   display: flex;
