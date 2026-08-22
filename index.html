@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Paramar. Bebidas Premium, Escolhidas a Dedo</title>
+<meta name="description" content="A Paramar é curadoria de bebidas premium. Entre e descubra Paramana, Maria da Guarda, Saints' Bay e outras marcas do nosso portfólio.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css?v=8">
+</head>
+<body>
+
+<!-- GATE DE IDADE -->
+<div id="age-gate" class="age-gate">
+  <div class="age-gate__bg" style="background-image:url('assets/images/faixa-etaria.jpg')"></div>
+  <div class="age-gate__overlay"></div>
+  <div class="age-gate__card">
+    <img src="assets/images/logo-paramar-light.png" alt="Paramar" class="age-gate__logo">
+    <h1 class="age-gate__headline">Antes de entrarmos em detalhes,<br>uma pergunta simples.</h1>
+    <p class="age-gate__body">Em que ano você nasceu?</p>
+    <form id="age-gate-form" class="age-gate__form" autocomplete="off" novalidate>
+      <input type="text" id="birth-year" name="birth-year" placeholder="AAAA" inputmode="numeric" maxlength="4" autocomplete="off">
+      <button type="submit" class="btn btn--primary">Entrar</button>
+    </form>
+    <p id="age-gate-error" class="age-gate__error" hidden>Voltamos a te receber assim que a idade chegar. Até lá, obrigado pela visita.</p>
+    <p class="age-gate__footnote">Ao confirmar, você declara ter 18 anos ou mais. Aqui dentro, tudo foi feito para ser apreciado com calma.</p>
+  </div>
+</div>
+
+<!-- SITE -->
+<div id="site" class="site" hidden>
+
+  <header class="header" id="topo">
+    <div class="header__inner">
+      <a href="#topo" class="header__logo">
+        <img src="assets/images/logo-paramar-light.png" alt="Paramar">
+      </a>
+      <nav class="header__nav" id="header-nav">
+        <a href="#marcas">Marcas</a>
+        <a href="#produtos">Produtos</a>
+        <a href="#receitas">Receitas</a>
+        <a href="#sobre">Sobre</a>
+      </nav>
+      <div class="header__actions">
+        <button class="cart-toggle" id="cart-toggle" aria-label="Abrir carrinho">
+          Carrinho <span class="cart-count" id="cart-count">0</span>
+        </button>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="header-nav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- CARRINHO -->
+  <div id="cart-overlay" class="cart-overlay" hidden></div>
+  <aside id="cart-drawer" class="cart-drawer" hidden aria-label="Carrinho de compras">
+    <div class="cart-drawer__header">
+      <h2>Seu carrinho</h2>
+      <button type="button" id="cart-close" class="cart-drawer__close" aria-label="Fechar carrinho">&times;</button>
+    </div>
+    <div class="cart-drawer__items" id="cart-items"></div>
+    <div class="cart-drawer__footer" id="cart-footer">
+      <div class="cart-drawer__total">
+        <span>Total</span>
+        <span id="cart-total">R$ 0,00</span>
+      </div>
+      <button type="button" id="cart-checkout" class="btn btn--primary cart-drawer__checkout">Finalizar compra</button>
+      <p class="cart-drawer__note">Compra fictícia, ambiente de teste, sem cobrança real.</p>
+    </div>
+  </aside>
+
+  <!-- MODAL DE PRODUTO -->
+  <div id="product-modal-overlay" class="product-modal-overlay" hidden></div>
+  <div id="product-modal" class="product-modal" hidden role="dialog" aria-modal="true" aria-label="Detalhes do produto">
+    <button type="button" id="product-modal-close" class="product-modal__close" aria-label="Fechar">&times;</button>
+    <div class="product-modal__media">
+      <img id="product-modal-img" class="product-modal__img" src="" alt="">
+    </div>
+    <div class="product-modal__info">
+      <p class="product-modal__category" id="product-modal-category"></p>
+      <h2 id="product-modal-name"></h2>
+      <p class="product-modal__volume" id="product-modal-volume"></p>
+      <p class="product-modal__desc" id="product-modal-desc"></p>
+      <div class="product-modal__footer">
+        <span class="product-modal__price" id="product-modal-price"></span>
+        <button type="button" class="btn btn--primary" id="product-modal-buy">Levar essa garrafa</button>
+      </div>
+    </div>
+  </div>
+
+  <section class="hero">
+    <video class="hero__video" autoplay muted loop playsinline poster="assets/images/faixa-etaria.jpg">
+      <source src="assets/video/hero.mp4" type="video/mp4">
+    </video>
+    <div class="hero__overlay"></div>
+    <div class="hero__content">
+      <h1 class="hero__headline">Bebida boa não é sobre pressa.</h1>
+      <p class="hero__lead">A Paramar é curadoria de bebidas premium,</p>
+      <p class="hero__subheadline">cada rótulo escolhido a dedo, para quem gosta de saber o que está bebendo.</p>
+      <p class="hero__invite">Entre e fique um tempo.</p>
+      <a href="#marcas" class="btn btn--outline">Explorar o rótulo</a>
+    </div>
+  </section>
+
+  <section id="marcas" class="section section--marcas">
+    <div class="section__inner">
+      <p class="section__eyebrow">O portfólio</p>
+      <h2 class="section__title">Marcas escolhidas a dedo</h2>
+      <p class="section__lead">Três casas, um critério: excelência que se sente no primeiro gole.</p>
+      <div class="brand-grid">
+        <article class="brand-card">
+          <img class="brand-card__img" src="assets/images/produtos/paramana-london-garrafa.jpg" alt="Paramana" loading="lazy">
+          <div class="brand-card__body">
+            <h3>Paramana</h3>
+            <p>Nasceu na Baía de Todos os Santos, batizada com o nome de uma praia escondida na Ilha dos Frades. Paramana é o gin que carrega o voo do guará-vermelho e o gosto do fim de tarde baiano. Seco, cítrico, herbal, feito para durar até o último raio de sol e o próximo brinde.</p>
+          </div>
+        </article>
+        <article class="brand-card">
+          <img class="brand-card__img" src="assets/images/produtos/maria-guarda-classica-garrafa.jpg" alt="Maria da Guarda" loading="lazy">
+          <div class="brand-card__body">
+            <h3>Maria da Guarda</h3>
+            <p>A cachaça que guarda tradição e reinventa o clássico. Tem duas faces: a Clássica, leve e transparente, ideal para caipirinhas de verão; e a Amburana, dourada e encorpada, com notas quentes de madeira que pedem copo baixo, gelo grande e conversa longa.</p>
+          </div>
+        </article>
+        <article class="brand-card">
+          <img class="brand-card__img" src="assets/images/produtos/saints-bay-original-garrafa.jpg" alt="Saints' Bay" loading="lazy">
+          <div class="brand-card__body">
+            <h3>Saints' Bay</h3>
+            <p>Saints' Bay é vodka com bússola. A Original é pura e direta; as versões de maçã verde e de laranja com pêssego trazem cor, fruta e um quê de viagem costeira. Feita para quem gosta de leveza e de um drink que combina com maré alta.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="produtos" class="section section--produtos">
+    <div class="section__inner">
+      <p class="section__eyebrow">A vitrine</p>
+      <h2 class="section__title">Nossas bebidas</h2>
+      <p class="section__lead">Do rótulo autoral ao clássico internacional. Cada garrafa do nosso catálogo, pronta para ir pra sua mesa.</p>
+      <div class="product-grid" id="product-grid"></div>
+    </div>
+  </section>
+
+  <section id="receitas" class="section section--receitas">
+    <div class="section__inner">
+      <p class="section__eyebrow">Na taça</p>
+      <h2 class="section__title">Descubra sua próxima taça</h2>
+      <p class="section__lead">Cada receita foi pensada para revelar o melhor de um rótulo, a proporção certa, o gelo certo, o momento certo.</p>
+      <div class="recipe-grid">
+        <article class="recipe-card">
+          <img class="recipe-card__img" src="assets/images/receitas/paramana-gin-tonica.jpg" alt="Paramana Gin Tônica" loading="lazy">
+          <div class="recipe-card__body">
+            <h3>Paramana Gin Tônica</h3>
+            <p class="recipe-card__meta">Gin Paramana London</p>
+            <p>50ml gin, 150ml tônica, gelo, rodela de limão e alecrim. Taça cheia de gelo, gin, tônica lenta, um mexer suave.</p>
+          </div>
+        </article>
+        <article class="recipe-card">
+          <img class="recipe-card__img" src="assets/images/receitas/red-berries-tonica.jpg" alt="Red Berries Tônica" loading="lazy">
+          <div class="recipe-card__body">
+            <h3>Red Berries Tônica</h3>
+            <p class="recipe-card__meta">Gin Paramana Frutas Vermelhas</p>
+            <p>50ml gin, 150ml tônica, morango, framboesa e amora. Macerar as frutas, gelo, gin e completar com tônica.</p>
+          </div>
+        </article>
+        <article class="recipe-card">
+          <img class="recipe-card__img" src="assets/images/receitas/caipirinha-maria-guarda.jpg" alt="Caipirinha Maria da Guarda" loading="lazy">
+          <div class="recipe-card__body">
+            <h3>Caipirinha Maria da Guarda</h3>
+            <p class="recipe-card__meta">Maria da Guarda Clássica</p>
+            <p>50ml cachaça, 1 limão, 20ml xarope de açúcar e gelo. O clássico de verão, no ponto.</p>
+          </div>
+        </article>
+        <article class="recipe-card">
+          <img class="recipe-card__img" src="assets/images/receitas/maria-old-fashioned.jpg" alt="Maria Old Fashioned" loading="lazy">
+          <div class="recipe-card__body">
+            <h3>Maria Old Fashioned</h3>
+            <p class="recipe-card__meta">Maria da Guarda Amburana</p>
+            <p>50ml Amburana, 10ml xarope, 2 dashes de Angostura, gelo grande e casca de laranja.</p>
+          </div>
+        </article>
+        <article class="recipe-card">
+          <img class="recipe-card__img" src="assets/images/receitas/saints-bay-caipirinha.jpg" alt="Saints' Bay Caipirinha" loading="lazy">
+          <div class="recipe-card__body">
+            <h3>Saints' Bay Caipirinha</h3>
+            <p class="recipe-card__meta">Vodka Saints' Bay</p>
+            <p>50ml vodka, limão, 20ml xarope de açúcar e gelo. Leveza com caráter de maré alta.</p>
+          </div>
+        </article>
+        <article class="recipe-card">
+          <img class="recipe-card__img" src="assets/images/receitas/negroni-classico.jpg" alt="Negroni Clássico" loading="lazy">
+          <div class="recipe-card__body">
+            <h3>Negroni Clássico</h3>
+            <p class="recipe-card__meta">Paramana Negroni</p>
+            <p>30ml gin, 30ml Campari, 30ml vermute tinto, gelo grande e twist de laranja.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="sobre" class="section section--sobre">
+    <div class="section__inner section__inner--narrow">
+      <p class="section__eyebrow">A casa</p>
+      <h2 class="section__title">Sobre a Paramar</h2>
+      <p>A Paramar é uma curadora de bebidas premium, não uma prateleira de rótulos, mas uma seleção pensada a dedo. Fundada para reunir o melhor entre marcas brasileiras e internacionais, já colecionou reconhecimento em premiações internacionais de peso, prova de um padrão que não se discute.</p>
+      <p>Por trás de cada garrafa que chega até você existe critério: procedência, sabor, história. A Paramar existe para quem entende que uma boa bebida não é só o que está no copo, é a experiência inteira ao redor dele.</p>
+
+      <blockquote class="sobre-proposito">
+        <p class="section__eyebrow">Nosso propósito</p>
+        <p>Criada em 2017, na Bahia, a Paramar Comércio de Bebidas nasceu com o propósito de celebrar com as pessoas a felicidade do presente, mantendo um olhar firme no futuro.</p>
+      </blockquote>
+
+      <div class="sobre-diretor">
+        <img class="sobre-diretor__img" src="assets/images/ermesson-batista.png" alt="Ermesson Batista, diretor da Paramar">
+        <div class="sobre-diretor__body">
+          <p class="section__eyebrow">À frente da marca</p>
+          <p>Quem comanda a Paramar é Ermesson Batista, diretor da marca e responsável por uma meta ousada: chegar a 10 mil pontos de venda ativos em todo o Brasil. Sob sua direção, o portfólio ganhou espaço em Free Shops de aeroportos brasileiros, em empórios de São Paulo e em novos estados do Nordeste, sempre com qualidade certificada pela Anvisa em cada garrafa. Para Ermesson, a força da marca começa em casa: "temos que ser os donos da categoria aqui", diz o diretor, sobre o vínculo entre a Bahia e cada rótulo do portfólio. A trajetória já rendeu espaço na imprensa baiana, incluindo reportagem na Super Revista.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p class="footer__brand">PARAMAR, bebidas premium, escolhidas a dedo.</p>
+    <p class="footer__legal">Aprecie com moderação. Venda proibida para menores de 18 anos.</p>
+    <p class="footer__copy">© 2026 Paramar Comércio de Bebidas Ltda. Todos os direitos reservados.</p>
+  </footer>
+
+</div>
+
+<script>
+(function () {
+  var KEY = 'paramar_age_verified';
+  var gate = document.getElementById('age-gate');
+  var site = document.getElementById('site');
+  var form = document.getElementById('age-gate-form');
+  var input = document.getElementById('birth-year');
+  var errorMsg = document.getElementById('age-gate-error');
+
+  function unlockSite() {
+    document.body.classList.add('is-unlocked');
+    if (gate) {
+      gate.hidden = true;
+      gate.style.display = 'none';
+    }
+    if (site) {
+      site.hidden = false;
+      site.removeAttribute('hidden');
+    }
+  }
+
+  try {
+    if (localStorage.getItem(KEY) === '1') {
+      unlockSite();
+      return;
+    }
+  } catch (e) {}
+
+  function enter() {
+    var digits = String(input.value || '').replace(/\D/g, '').slice(0, 4);
+    input.value = digits;
+    var year = parseInt(digits, 10);
+    var now = new Date().getFullYear();
+
+    if (digits.length !== 4 || !year || year < 1900 || year > now) {
+      errorMsg.textContent = 'Digite o ano com 4 números, por exemplo 1996.';
+      errorMsg.hidden = false;
+      return;
+    }
+
+    if (now - year < 18) {
+      form.hidden = true;
+      errorMsg.textContent = 'Voltamos a te receber assim que a idade chegar. Até lá, obrigado pela visita.';
+      errorMsg.hidden = false;
+      return;
+    }
+
+    try { localStorage.setItem(KEY, '1'); } catch (e) {}
+    unlockSite();
+  }
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    e.stopPropagation();
+    enter();
+  });
+
+  input.addEventListener('keydown', function (e) {
+    if (e.key === 'Enter') {
+      e.preventDefault();
+      enter();
+    }
+  });
+})();
+</script>
+<script src="js/app.js"></script>
+<script src="js/products.js"></script>
+</body>
+</html>
