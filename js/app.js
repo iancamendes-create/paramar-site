@@ -193,9 +193,25 @@
     cartFooter.hidden = true;
   }
 
+  function initHeroSound() {
+    const video = document.querySelector('.hero__video');
+    const toggle = document.getElementById('hero-sound-toggle');
+    if (!video || !toggle) return;
+    toggle.addEventListener('click', function () {
+      video.muted = !video.muted;
+      if (!video.muted) {
+        video.play().catch(function () { video.muted = true; });
+      }
+      toggle.classList.toggle('is-unmuted', !video.muted);
+      toggle.textContent = video.muted ? '🔇 Ativar som' : '🔊 Silenciar';
+      toggle.setAttribute('aria-label', video.muted ? 'Ativar som do vídeo' : 'Silenciar o vídeo');
+    });
+  }
+
   document.addEventListener('DOMContentLoaded', function () {
     initCartDrawer();
     initNavToggle();
+    initHeroSound();
   });
   updateCartCount(getCart());
 })();

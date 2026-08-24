@@ -259,6 +259,24 @@ body.is-unlocked #site {
   opacity: 0.9;
   margin: 1.35rem 0 2rem;
 }
+.hero__sound-toggle {
+  position: absolute;
+  z-index: 2;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  background: rgba(6,28,51,0.55);
+  border: 1px solid rgba(255,255,255,0.4);
+  color: var(--color-white);
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  padding: 0.55rem 1rem;
+  border-radius: 999px;
+  cursor: pointer;
+  backdrop-filter: blur(2px);
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+.hero__sound-toggle:hover { background: rgba(6,28,51,0.75); }
+.hero__sound-toggle.is-unmuted { border-color: var(--color-blue-accent); }
 
 /* ===== DESTAQUE NEGRONI ===== */
 .negroni-feature {
@@ -820,6 +838,7 @@ body.modal-open {
   .hero__headline { font-size: 2.2rem; }
   .hero__lead { font-size: 1.05rem; }
   .hero__subheadline { font-size: 0.95rem; }
+  .hero__sound-toggle { bottom: 1rem; right: 1rem; font-size: 0.75rem; padding: 0.45rem 0.8rem; }
   .section__title { font-size: 1.85rem; }
   .product-row { grid-template-columns: 1fr 1fr; gap: 0.8rem; }
   .product-card__name { font-size: 1.05rem; }
