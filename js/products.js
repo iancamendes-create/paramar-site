@@ -85,7 +85,7 @@
     // ===== CACHAÇAS =====
     {
       id: 'maria-guarda-classica',
-      name: 'Cachaça Maria da Guarda Clássica',
+      name: 'Cachaça Maria Guarda Clássica',
       category: 'Cachaças',
       volume: '700ml',
       price: 99.90,
@@ -95,7 +95,7 @@
     },
     {
       id: 'maria-guarda-amburana',
-      name: 'Cachaça Maria da Guarda Amburana',
+      name: 'Cachaça Maria Guarda Amburana',
       category: 'Cachaças',
       volume: '750ml',
       price: 97.90,
@@ -143,17 +143,8 @@
       price: 129.00,
       description: 'O clássico italiano engarrafado com a assinatura Paramana, pronto pra servir com gelo grande e twist de laranja.',
       img: 'paramana-negroni-garrafa.jpg',
-      imgHover: 'paramana-negroni-drink.jpg'
-    },
-    {
-      id: 'gula-fit-gin-spritz',
-      name: 'Güla Fit Gin Spritz',
-      category: 'Coquetéis prontos',
-      volume: '269ml',
-      price: 28.00,
-      description: 'Gin spritz leve e pronto para beber, poucas calorias, todo o sabor, direto da lata pro copo com gelo.',
-      img: 'gula-fit-gin-spritz-garrafa.jpg',
-      imgHover: 'gula-fit-gin-spritz-hover.jpg'
+      imgHover: 'paramana-negroni-drink.jpg',
+      badge: 'Mais vendido'
     }
   ];
 
@@ -216,6 +207,13 @@
           media.appendChild(imgDrink);
         }
 
+        if (product.badge) {
+          const badge = document.createElement('span');
+          badge.className = 'product-card__badge';
+          badge.textContent = product.badge;
+          media.appendChild(badge);
+        }
+
         card.appendChild(media);
 
         const body = document.createElement('div');
@@ -266,7 +264,7 @@
   }
 
   // ===== MODAL DE PRODUTO =====
-  let modalOverlay, modal, modalImg, modalCategory, modalName, modalVolume, modalDesc, modalPrice, modalBuy, modalClose;
+  let modalOverlay, modal, modalImg, modalBadge, modalCategory, modalName, modalVolume, modalDesc, modalPrice, modalBuy, modalClose;
   let currentModalProduct = null;
 
   function initModal() {
@@ -274,6 +272,7 @@
     modal = document.getElementById('product-modal');
     if (!modalOverlay || !modal) return;
     modalImg = document.getElementById('product-modal-img');
+    modalBadge = document.getElementById('product-modal-badge');
     modalCategory = document.getElementById('product-modal-category');
     modalName = document.getElementById('product-modal-name');
     modalVolume = document.getElementById('product-modal-volume');
@@ -297,6 +296,12 @@
     currentModalProduct = product;
     modalImg.src = IMG_BASE + product.img;
     modalImg.alt = product.name;
+    if (product.badge) {
+      modalBadge.textContent = product.badge;
+      modalBadge.hidden = false;
+    } else {
+      modalBadge.hidden = true;
+    }
     modalCategory.textContent = product.category;
     modalName.textContent = product.name;
     modalVolume.textContent = product.volume;
@@ -317,9 +322,19 @@
     currentModalProduct = null;
   }
 
+  function initFeatureLinks() {
+    document.querySelectorAll('[data-open-product]').forEach(function (el) {
+      el.addEventListener('click', function () {
+        const product = PRODUCTS.find(p => p.id === el.dataset.openProduct);
+        if (product) openModal(product);
+      });
+    });
+  }
+
   window.PARAMAR_PRODUCTS = PRODUCTS;
   document.addEventListener('DOMContentLoaded', function () {
     initModal();
     renderProducts();
+    initFeatureLinks();
   });
 })();

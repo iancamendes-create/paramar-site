@@ -260,6 +260,41 @@ body.is-unlocked #site {
   margin: 1.35rem 0 2rem;
 }
 
+/* ===== DESTAQUE NEGRONI ===== */
+.negroni-feature {
+  background: var(--color-navy);
+  padding: 3.5rem 1.5rem;
+}
+.negroni-feature__inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 2.5rem;
+  align-items: center;
+}
+.negroni-feature__img {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  border-radius: 4px;
+}
+.negroni-feature__text .section__eyebrow { margin-bottom: 0.7rem; }
+.negroni-feature__text h2 {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--color-white);
+  margin: 0 0 0.7rem;
+}
+.negroni-feature__text p {
+  color: var(--color-white);
+  opacity: 0.85;
+  line-height: 1.6;
+  margin: 0 0 1.4rem;
+  max-width: 480px;
+}
+
 /* ===== SEÇÕES ===== */
 .section {
   scroll-margin-top: 88px;
@@ -423,6 +458,20 @@ body.is-unlocked #site {
   transition: opacity 0.35s ease;
 }
 .product-card__img--hover { opacity: 0; }
+.product-card__badge {
+  position: absolute;
+  top: 0.7rem;
+  left: 0.7rem;
+  z-index: 2;
+  background: var(--color-navy);
+  color: var(--color-white);
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 0.35rem 0.65rem;
+  border-radius: 999px;
+}
 .product-card.has-hover:hover .product-card__img--base,
 .product-card.has-hover.is-showing-hover .product-card__img--base { opacity: 0; }
 .product-card.has-hover:hover .product-card__img--hover,
@@ -659,6 +708,7 @@ body.modal-open {
   z-index: 1;
 }
 .product-modal__media {
+  position: relative;
   background: var(--color-cream);
 }
 .product-modal__img {
@@ -737,6 +787,9 @@ body.modal-open {
   .recipe-grid { grid-template-columns: 1fr; }
   .product-row { grid-template-columns: repeat(2, 1fr); }
   .product-modal { grid-template-columns: 1fr; }
+  .negroni-feature__inner { grid-template-columns: 1fr; text-align: center; }
+  .negroni-feature__img { max-width: 220px; margin: 0 auto; }
+  .negroni-feature__text p { margin-left: auto; margin-right: auto; }
   .product-modal__img { min-height: 240px; }
 }
 

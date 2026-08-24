@@ -4,11 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Paramar. Sabor da Bahia, Escolhido a Dedo</title>
-<meta name="description" content="A Paramar é curadoria de bebidas com raiz baiana e sofisticação no copo. Entre e descubra Paramana, Maria da Guarda, Saints' Bay e outras marcas do nosso portfólio.">
+<meta name="description" content="A Paramar é curadoria de bebidas com raiz baiana e sofisticação no copo. Entre e descubra Paramana, Maria Guarda, Saints' Bay e outras marcas do nosso portfólio.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css?v=9">
+<link rel="stylesheet" href="css/style.css?v=10">
 </head>
 <body>
 
@@ -77,6 +77,7 @@
   <div id="product-modal" class="product-modal" hidden role="dialog" aria-modal="true" aria-label="Detalhes do produto">
     <button type="button" id="product-modal-close" class="product-modal__close" aria-label="Fechar">&times;</button>
     <div class="product-modal__media">
+      <span id="product-modal-badge" class="product-card__badge" hidden></span>
       <img id="product-modal-img" class="product-modal__img" src="" alt="">
     </div>
     <div class="product-modal__info">
@@ -105,6 +106,18 @@
     </div>
   </section>
 
+  <section class="negroni-feature">
+    <div class="negroni-feature__inner">
+      <img class="negroni-feature__img" src="assets/images/produtos/paramana-negroni-drink.jpg" alt="Paramana Negroni" loading="lazy">
+      <div class="negroni-feature__text">
+        <span class="section__eyebrow">Mais vendido</span>
+        <h2>Paramana Negroni</h2>
+        <p>O clássico italiano engarrafado com a assinatura Paramana. O drink que a Bahia mais pede, pronto pra servir com gelo grande e twist de laranja.</p>
+        <button type="button" class="btn btn--primary" data-open-product="paramana-negroni">Ver o Negroni</button>
+      </div>
+    </div>
+  </section>
+
   <section id="marcas" class="section section--marcas">
     <div class="section__inner">
       <p class="section__eyebrow">O portfólio</p>
@@ -119,9 +132,9 @@
           </div>
         </article>
         <article class="brand-card">
-          <img class="brand-card__img" src="assets/images/produtos/maria-guarda-classica-garrafa.jpg" alt="Maria da Guarda" loading="lazy">
+          <img class="brand-card__img" src="assets/images/produtos/maria-guarda-classica-garrafa.jpg" alt="Maria Guarda" loading="lazy">
           <div class="brand-card__body">
-            <h3>Maria da Guarda</h3>
+            <h3>Maria Guarda</h3>
             <p>A cachaça que guarda tradição e reinventa o clássico. Tem duas faces: a Clássica, leve e transparente, ideal para caipirinhas de verão; e a Amburana, dourada e encorpada, com notas quentes de madeira que pedem copo baixo, gelo grande e conversa longa.</p>
           </div>
         </article>
@@ -168,10 +181,10 @@
           </div>
         </article>
         <article class="recipe-card">
-          <img class="recipe-card__img" src="assets/images/receitas/caipirinha-maria-guarda.jpg" alt="Caipirinha Maria da Guarda" loading="lazy">
+          <img class="recipe-card__img" src="assets/images/receitas/caipirinha-maria-guarda.jpg" alt="Caipirinha Maria Guarda" loading="lazy">
           <div class="recipe-card__body">
-            <h3>Caipirinha Maria da Guarda</h3>
-            <p class="recipe-card__meta">Maria da Guarda Clássica</p>
+            <h3>Caipirinha Maria Guarda</h3>
+            <p class="recipe-card__meta">Maria Guarda Clássica</p>
             <p>50ml cachaça, 1 limão, 20ml xarope de açúcar e gelo. O clássico de verão, no ponto.</p>
           </div>
         </article>
@@ -179,7 +192,7 @@
           <img class="recipe-card__img" src="assets/images/receitas/maria-old-fashioned.jpg" alt="Maria Old Fashioned" loading="lazy">
           <div class="recipe-card__body">
             <h3>Maria Old Fashioned</h3>
-            <p class="recipe-card__meta">Maria da Guarda Amburana</p>
+            <p class="recipe-card__meta">Maria Guarda Amburana</p>
             <p>50ml Amburana, 10ml xarope, 2 dashes de Angostura, gelo grande e casca de laranja.</p>
           </div>
         </article>
